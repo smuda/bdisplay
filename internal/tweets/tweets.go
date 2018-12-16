@@ -17,7 +17,6 @@ import (
 )
 
 const (
-	// templateName = "tweets.gohtml"
 	moduleName = "tweets"
 )
 
