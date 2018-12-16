@@ -268,7 +268,6 @@ func getSLFel(slKey, slURL string) []SL {
 	var sl SLResult
 	var ret []SL
 	year, month, day := time.Now().Date()
-	// res, err := myClient.Get(fmt.Sprintf("http://api.sl.se/api2/deviations.json?key="+slKey+"&transportMode=metro,train&fromDate=%d-%02d-%02d&toDate=%d-%02d-%02d", year, month, day, year, month, day))
 	res, err := myClient.Get(fmt.Sprintf(slURL+"?key="+slKey+"&transportMode=metro,train&fromDate=%d-%02d-%02d&toDate=%d-%02d-%02d", year, month, day, year, month, day))
 	if err != nil {
 		log.Println(err.Error())
