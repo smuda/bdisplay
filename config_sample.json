@@ -1,0 +1,47 @@
+{
+    "doRedirect": true,
+    "modules": ["ove", "monitis", "projs", "tweets", "dagens"],
+    "redirectTimeout": [45, 45, 45, 45, 45],
+    "serverPort": "8080",
+    "serverHost": "localhost",
+    "resourceDir": "res",
+    "templatesDir": "tpls",
+    "contentDir": "content",
+    "templatesExt": ".gohtml",
+    "cssFile": "w3.css",
+    "bdupdate": {
+        "logFile": "bdupdate.log"
+    },
+    "projects": {
+        "fileName": "projs.json"
+    },
+    "tweets": {
+        "fileName": "tweets.json",
+        "consumerKey":"01234567890123456789012345",
+        "consumerSecret": "01234567890123456789012345678901234567890123456789",
+        "accessToken": "01234567890123456789012345678901234567890123456789",
+        "accessSecret": "012345678901234567890123456789012345678901234",
+        "queryString": "Korv",
+        "queryLang": "sv"
+    
+    },
+    "dagens": {
+        "fileName": "dagens.json",
+        "flagImg": "bordsflagga.jpg",
+        "dilbertImg": "dilbert.gif",
+        "xkcdImg": "xkcd.png",
+        "slKey": "01234567890123456789012345678901",
+        "dilbertUrl": "https://dilbert.idg.se/dil%s.gif",
+        "namesdayUrl": "https://api.dryg.net/dagar/v2.1/%d/%d/%d",
+        "xkcdUrl": "https://xkcd.com/info.0.json",
+        "slUrl": "http://api.sl.se/api2/deviations.json"
+    },
+    "ove": {
+        "monitisUrl": "https://dashboard.monitis.com/sharedModule/shareModule.js",
+        "moduleId": "01234567890123456789012345"
+    },
+    "monitis": {
+        "monitisUrl": "https://dashboard.monitis.com/sharedModule/shareModule.js",
+        "moduleId": ["0123456789012345678901234", "0123456789012345678901234", "01234567890123456789012345", "0123456789012345678901234", "01234567890123456789012345"]
+    }
+}

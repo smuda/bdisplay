@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{.RedirectString}}
+    <title>BID Projects</title>
+    <link rel="stylesheet" href="{{.CSSFile}}" />
+    <style>
+        body{
+            height: 98%!important;
+        }
+        div {
+            padding: 0px 0px 0px 20px;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+        table {
+            height: 100%!important;
+        }
+        th{
+            color: #FFFFFF;
+        }
+        td{
+            padding-top: 2px!important;
+            padding-bottom: 2px!important;
+        }
+        h1{
+            text-align: center;
+        }
+        .tdRight{
+            text-align: right!important;
+        }
+        .tdCenter{
+            text-align: center!important;
+        }
+    </style>
+</head>
+<body>
+<h1>Pågående projekt ({{.NrOfProjs}})</h1>
+<div class="w3-container">Uppdaterad: {{.PageUpdated}}</div>
+<table class="w3-table w3-bordered w3-striped w3-large">
+    <tr class="w3-dark-bid-blue"><th>Tidkod</th><th>Namn</th><th class="tdRight">Budget i år</th><th class="tdRight">Upparbetat i år</th><th class="tdCenter">Ansvarig</th></tr>
+    {{range .ProjectList}}
+    <tr><td> {{.Code}} </td><td> {{.Name}} </td><td class="tdRight"> {{.Budget}} </td><td class="tdRight"> {{.Cost}} </td><td class="tdCenter"> {{.Lead}} </td></tr>
+    {{end}}
+</body>
+</html>

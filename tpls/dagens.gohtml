@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{.RedirectString}}
+    <title>BID Projects</title>
+    <link rel="stylesheet" href={{.CSSFile}} />
+    <style>
+        .updated-div {
+            padding: 0px 0px 0px 20px;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+        .date-div {
+            float: right;
+        }
+        h1{
+            text-align: center;
+        }
+        .flag{
+            float: right;
+            width: 60px;
+            height: 125px;
+        }
+        .ulhead{
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <h1>Dagens...</h1><div class="w3-container updated-div">Uppdaterad: {{.PageUpdated}}</div>
+  <div style="width: 100%; margin:auto;">
+    <!-- Namnsdag -->
+    <div class="w3-card-4" style="float: left; width: 350px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+      <div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">Namnsdag!<div class="date-div"><!--.Date--></div></div>
+      <div class="w3-large" style="padding: 0px 5px 0px 5px">
+        {{.Content.Namnsdag}}{{.FlagURL}}
+      </div>
+    </div>
+    <!-- Dilbert -->
+    <div class="w3-card-4" style="float: left; width: 690px; height: 250px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+      <div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">Dilbert<div class="date-div"><!--.Date--></div></div>
+      <div class="w3-large" style="padding: 0px 5px 0px 5px">
+        {{.Content.DilbertURL}}
+      </div>
+    </div>
+    <!-- XKCD -->
+    <div class="w3-card-4" style="float: left; width: {{.Content.XKCDx}}px; height: {{.Content.XKCDy}}px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+      <div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">XKCD<div class="date-div"><!--.Date--></div></div>
+      <div class="w3-large" style="padding: 0px 5px 0px 5px">
+        {{.Content.XKCDURL}}
+      </div>
+    </div>
+
+    <!-- SLFel -->
+    <div class="w3-card-4" style="float: left; width: 750px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+      <div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">SL-problem..<div class="date-div"><!--.Date--></div></div>
+      {{range .Content.SLFel}}
+      <div class="w3-large" style="padding: 0px 5px 0px 5px">
+        <ul>
+        <div class="ulhead">{{.Trafiklinje}}</div>
+        {{range $m := .Meddelande}}
+        <li>{{$m}}</li>
+        {{end}}
+        </ul>
+      </div>
+      {{end}}
+    </div>
+
+  </div>
+</body>
+</html>

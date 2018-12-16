@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{.RedirectString}}
+    <title>BID Projects</title>
+    <link rel="stylesheet" href="{{.CSSFile}}" />
+    <style>
+        .updated-div {
+            padding: 0px 0px 0px 20px;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+        .date-div {
+            float: right;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Senaste "tweets"</h1><div class="w3-container updated-div">Uppdaterad: {{.PageUpdated}}</div>
+<div style="width: 100%; margin:auto;">
+{{range .TweetList}}
+<div class="w3-card-4" style="float: left; width: 350px; height: 180px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+<div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">{{.ID}}<div class="date-div">{{.Date}}</div></div>
+<div class="w3-large" style="padding: 0px 5px 0px 5px">
+{{.Text}}
+</div>
+</div>
+{{end}}
+</div>
+</body>
+</html>

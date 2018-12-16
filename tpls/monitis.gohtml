@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{.RedirectString}}
+    <title>Svarstider</title>
+    <link rel="stylesheet" href="{{.CSSFile}}" />
+    <style>
+        .updated-div {
+            padding: 0px 0px 0px 20px;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+        .date-div {
+            float: right;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Statistik från Monitis</h1><div class="w3-container updated-div"></div>
+
+<div style="width: 100%; margin:auto;">
+<div class="w3-card-4" style="float: left; width: 1040px; height: 310px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+<div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">Svarstider<div class="date-div">RP-gränssnittet</div></div>
+<div class="w3-large" style="padding: 0px 5px 0px 5px">
+    <script type="text/javascript">
+embed_module_id='{{.ModuleID "0"}}';
+embed_module_width="1000";
+embed_module_height="300";
+embed_module_readonlyChart="true";
+embed_module_readonlyDateRange="true";
+embed_module_datePeriod="1";
+embed_module_detailedError="false";
+</script>
+<script type="text/javascript" src="{{.MonitisURL}}"></script>
+</div>
+</div>
+</div>
+
+<div style="width: 100%; margin:auto;">
+<div class="w3-card-4" style="float: left; width: 1040px; height: 310px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+<div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">Svarstider<div class="date-div">App-gränssnittet</div></div>
+<div class="w3-large" style="padding: 0px 5px 0px 5px">
+    <script type="text/javascript">
+embed_module_id='{{.ModuleID "1"}}';
+embed_module_width="1000";
+embed_module_height="300";
+embed_module_readonlyChart="true";
+embed_module_readonlyDateRange="true";
+embed_module_datePeriod="1";
+embed_module_detailedError="false";
+</script>
+<script type="text/javascript" src="{{.MonitisURL}}"></script>
+</div>
+</div>
+</div>
+
+<div style="width: 100%; margin:auto;">
+<div class="w3-card-4" style="float: left; width: 1040px; height: 310px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+<div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">Svarstider<div class="date-div">CU</div></div>
+<div class="w3-large" style="padding: 0px 5px 0px 5px">
+    <script type="text/javascript">
+embed_module_id='{{.ModuleID "2"}}';
+embed_module_width="1000";
+embed_module_height="300";
+embed_module_readonlyChart="true";
+embed_module_readonlyDateRange="true";
+embed_module_datePeriod="1";
+embed_module_detailedError="false";
+</script>
+<script type="text/javascript" src="{{.MonitisURL}}"></script>
+</div>
+</div>
+</div>
+
+<div style="width: 100%; margin:auto;">
+<div class="w3-card-4" style="float: left; width: 1040px; height: 310px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+<div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">Svarstider<div class="date-div">www.bankid.com</div></div>
+<div class="w3-large" style="padding: 0px 5px 0px 5px">
+    <script type="text/javascript">
+embed_module_id='{{.ModuleID "3"}}';
+embed_module_width="1000";
+embed_module_height="300";
+embed_module_readonlyChart="true";
+embed_module_readonlyDateRange="true";
+embed_module_datePeriod="1";
+embed_module_detailedError="false";
+</script>
+<script type="text/javascript" src="{{.MonitisURL}}"></script>
+</div>
+</div>
+</div>
+
+<div style="width: 100%; margin:auto;">
+<div class="w3-card-4" style="float: left; width: 1040px; height: 310px; border-color:grey; border-style:solid; border-width:thin; margin: 20px ">
+<div class="w3-dark-bid-blue w3-large" style="color:white!important; padding: 0px 5px 0px 5px">Svarstider<div class="date-div">install.bankid.com</div></div>
+<div class="w3-large" style="padding: 0px 5px 0px 5px">
+    <script type="text/javascript">
+embed_module_id='{{.ModuleID "4"}}';
+embed_module_width="1000";
+embed_module_height="300";
+embed_module_readonlyChart="true";
+embed_module_readonlyDateRange="true";
+embed_module_datePeriod="1";
+embed_module_detailedError="false";
+</script>
+<script type="text/javascript" src="{{.MonitisURL}}"></script>
+</div>
+</div>
+</div>
+
+</body>
+</html>
