@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"image"
+
 	// Imported to be able to handle png file size
 	_ "image/png"
 	"io"
